@@ -1,0 +1,42 @@
+version: 0.2
+
+env:
+  variables:
+    DEPLOY_ENV: dev
+  parameter-store:
+    DOCKER_USERNAME: /greendose/docker-credentials/username
+    DOCKER_PASSWORD: /greendose/docker-credentials/password
+    DOCKER_REGISTRY: /greendose/docker-registry/url
+
+phases:
+  install:
+    commands:
+      - echo "Checking Docker installation..."
+      - docker --version
+      - docker compose version || docker-compose version
+
+  pre_build:
+    commands:
+      - echo "Logging in to Docker registry..."
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_REGISTRY"
+
+  build:
+    commands:
+      - echo "Build started on $(date)"
+      - echo "Building Docker images using docker compose"
+      - docker compose -f docker-compose.yml -f docker/dev.yml build
+
+      - echo "Tagging images"
+      - docker tag greendose-wellness-frontend-${DEPLOY_ENV} $DOCKER_USERNAME/frontend:latest
+      - docker tag greendose-wellness-backend-${DEPLOY_ENV} $DOCKER_USERNAME/backend:latest
+
+  post_build:
+    commands:
+      - echo "Pushing images to Docker Hub"
+      - docker push $DOCKER_USERNAME/frontend:latest
+      - docker push $DOCKER_USERNAME/backend:latest
+      - echo "Build completed successfully"
+
+artifacts:
+  files:
+    - '**/*'
