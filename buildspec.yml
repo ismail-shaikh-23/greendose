@@ -28,7 +28,7 @@ phases:
 
       - echo "Tagging images"
       - docker tag greendose-wellness-frontend-${DEPLOY_ENV} $DOCKER_USERNAME/frontend:latest
-      - docker tag greendose-wellness-backend-${DEPLOY_ENV} $DOCKER_USERNAME/backend:latest
+      - docker tag greendose-wellness-${DEPLOY_ENV} $DOCKER_USERNAME/backend:latest
 
   post_build:
     commands:
