@@ -1,0 +1,98 @@
+@use "@/styles/variables.scss" as v;
+
+.mainDiv {
+
+  padding: 0 15px;
+
+  min-width: 24vw;
+  justify-content: center;
+  
+  align-items: center;
+ 
+
+.login_logo{
+  justify-content: center;
+  align-items: center;
+  margin-left: 70px;
+  padding-top: 60px;
+//  margin-top: 40px;
+
+}
+  .heading {
+    color:  #157540;
+
+    font-size: 20px;
+    font-weight: 600;
+  margin-top: 10px;
+    text-align: center;
+    font-family: Inter;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+
+  }
+
+  .subHeading {
+    color: #000000;
+    font-size: 14px;
+ 
+ margin-top: 30px;
+    text-align: center;
+
+font-weight: 500;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+
+  }
+
+  .form {
+    padding-top: 20px;
+   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+    .button {
+      font-size: 14px !important;
+      font-weight: 600;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 40px;
+      border-radius: 8px;
+      background: #CCCCCC;
+  transition: background 0.3s ease;
+    }
+
+.activeButton {
+background: radial-gradient(62.17% 100% at 50% 0%, #93CC4A 0%, #157540 100%);
+  color: white;
+}
+
+    .bottomText {
+ 
+      font-size: 11px;
+      font-weight: 400;
+     text-align: right;
+     color: #FF3737;
+     text-decoration: none;
+     margin-top: -4px;
+    //  margin-right: 18px;
+    padding-right: 14px;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainDiv {
+    width: 60vw !important;
+  }
+}

@@ -1,0 +1,47 @@
+@use "@/styles/variables" as v;
+
+.dashboardtable {
+  width: 100%;
+
+  :global {
+    .rdt_Table {
+      box-shadow: 0px 1px 4px 0px #0000001a;
+    
+    }
+
+    .rdt_TableHeadRow {
+      color: #7e7e7e !important;
+      height: 6px !important;
+      line-height: 6px !important;
+      font-size: 0.75rem;
+      border-bottom: none !important;
+      font-weight: 600;
+      padding: 0;
+      border-radius: 0.375rem 0.375rem 0 0 !important;
+      background: v.$dashboardtable-head;
+
+      letter-spacing: 0%;
+    }
+
+    .rdt_TableRow {
+      font-size: 0.75rem;
+      color: #191722;
+      font-weight: 500;
+      border-bottom: none !important;
+      min-height: 52px;
+    }
+
+    .rdt_TableHead {
+      z-index: 3;
+      padding: 0rem !important;
+      top: 0;
+    }
+
+    .rdt_TableBody {
+      border-radius: 0 0 0.625rem 0.625rem !important;
+      max-height: 17.4rem;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}

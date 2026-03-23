@@ -1,0 +1,72 @@
+@use "@/styles/variables" as v;
+
+.tabPanel {
+  display: flex;
+
+  height: 2.5rem;
+   flex-wrap: nowrap; // ✅ Do not wrap tabs
+  gap: 1.5rem;
+  overflow-x: auto; 
+width: 320px;
+ margin-left: 8px;
+ margin-top: 8px;
+  padding-bottom: 2px; // 🧹 make space for scrollbar if needed
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+  .tabName {
+    min-width: 80px; // ✅ Consistent width across normal and active
+  max-width: 80px;
+ height: 32px;
+
+    display: flex;
+    // width: 150px;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600 !important;
+    // letter-spacing: 0.5px;
+    color: #9EA1A1;
+    position: relative;
+    cursor: pointer;
+    // min-width: 60px;
+    padding: 0rem 0.25rem;
+      align-items: center;  
+// line-height: 100%;
+letter-spacing: -2%;
+text-align: center;
+ transition: all 200ms ease;
+    &:hover {
+      color: #0b0e1daa;
+      transition: color ease 500ms;
+    }
+
+    &.active {
+   box-shadow: 0px 2.38px 5.96px 0px #0A13091F;
+
+    color: #0B2B23;
+    background-color: #ABD35F33;
+    position: relative;
+     align-items: center;
+    //  height: 30px;
+border: 0.6px solid #EAF3EE;
+ 
+border-radius: 6px;
+
+    
+
+      
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tabPanel {
+    gap: 20px !important;
+    height: 50px;
+
+    .tabName {
+      font-size: 10px !important;
+    }
+  }
+}

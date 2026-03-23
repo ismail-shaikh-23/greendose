@@ -1,0 +1,77 @@
+@use "variables" as v;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  :global {
+    .rdt_TableHeadRow {
+      .rdt_TableCol:last-child {
+        position: sticky;
+        right: 0;
+        z-index: 12;
+        background: v.$table-head;
+        box-shadow: -4px 0 1px -4px rgba(0, 0, 0, 0.1);
+        color: #7E7E7E;
+      
+        
+font-weight: 500;
+font-size: 0.75rem;
+letter-spacing: 0%;
+
+      }
+
+    
+    }
+    .rdt_TableRow {
+      position: relative;
+
+   .rdt_TableCell {
+      // line-height: 61px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+      .rdt_TableCell:last-child {
+        background: v.$primary-background;
+        position: sticky;
+        right: 0;
+        z-index: 2;
+        box-shadow: -4px 0 1px -4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  :global {
+  .status-active {
+    color: #82C583;
+   padding: 10px 15px;
+    background-color: #82C5831A;
+ border-radius: 60px;
+ 
+font-weight: 600;
+font-size: 14px;
+
+letter-spacing: 0%;
+
+  }
+
+  .status-inactive {
+    color: red;
+    font-weight: 500;
+  }
+}
+
+}

@@ -1,0 +1,67 @@
+@use "@/styles/variables" as v;
+
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient(
+    75.03% 186.52% at 24.97% 50%,
+    #ffffff 0%,
+    #d2fee6 100%
+  );
+  box-shadow: 0px 0px 10px 0px #00000026;
+
+  // background: rgba(#99cc66 , 0.15);
+  // background: url("../../../assets/png/login-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  // display: flex;
+  // justify-content: flex-end;
+  .logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    .inner_logo {
+      position: absolute;
+      top: 10px;
+      left: 21%;
+      width: 270px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .main_img {
+      position: relative;
+      top: -80px;
+      bottom: 20%;
+      left: -22%;
+      max-width: 90%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .childrenContainer {
+    position: absolute;
+    top: 50vh;
+    right: 8vw;
+    transform: translateY(-50%);
+
+    box-shadow: 0px 0px 10px 0px #00000026;
+
+    background: #fff;
+
+    padding: 40px 20px;
+    border-radius: 20px;
+    width: 480px;
+    align-items: center;
+    justify-content: center;
+  }
+}

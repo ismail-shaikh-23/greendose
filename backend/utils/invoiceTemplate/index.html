@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice</title>
+  <!-- <link rel="stylesheet" href="invoice.css"> -->
+</head>
+<body>
+  <div class="invoice-container">
+    <!-- Header -->
+    <div class="invoice-header">
+      <img src="{{LOGO_URL}}" alt="Company Logo" class="logo" />
+      <h1>Invoice</h1>
+    </div>
+
+    <!-- Billed and Order Info -->
+    <div class="invoice-info">
+      <div class="billed-to">
+        <p><strong>Billed to</strong></p>
+        <p>{{CUSTOMER_NAME}}</p>
+        <p>{{CUSTOMER_ADDRESS}}</p>
+        <p>{{CUSTOMER_MOBILE}}</p>
+      </div>
+      <div class="order-info">
+        <p>Order number: <strong>{{ORDER_NUMBER}}</strong></p>
+        <p>Invoice Number: <strong>{{INVOICE_NUMBER}}</strong></p>
+        <p>Invoice date: {{INVOICE_DATE}}</p>
+        <p>Invoice Time: {{INVOICE_TIME}}</p>
+        <p class="total-amount">Invoice (AED): <span>{{TOTAL_PRICE}}</span></p>
+      </div>
+    </div>
+
+    <!-- Subject -->
+    <div class="subject">
+      <p><strong>Subject</strong>: {{PRODUCT_NAME}}</p>
+    </div>
+
+    <!-- Item Table -->
+    <table class="item-table">
+      <thead>
+        <tr>
+          <th>Item Detail</th>
+          <th>Qty</th>
+          <th>Rate</th>
+          <th>Discount</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            {{PRODUCT_NAME}}<br />
+            <small>{{PRODUCT_DESCRIPTION}}</small>
+          </td>
+          <td>{{PRODUCT_QUANTITY}}</td>
+          <td>{{PRODUCT_PRICE}}</td>
+          <td>{{PRODUCT_DISCOUNT}}</td>
+          <td>{{TOTAL_PRICE}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Totals -->
+    <div class="totals">
+      <p>Subtotal: {{SUBTOTAL}}</p>
+      <p>Delivery Fee: {{DELIVERY_FEE}}</p>
+      <p>Handling Charges: {{HANDLING_CHARGES}}</p>
+      <p class="grand-total">Total: AED {{TOTAL_PRICE}}</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Green Dose.</p>
+      <p>Affordable . Sustainable . For everyone. </p>
+      <p class="terms">Terms & Conditions</p>
+    </div>
+  </div>
+</body>
+</html>

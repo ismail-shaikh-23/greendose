@@ -1,0 +1,51 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+
+
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+    .deleteButton {
+        background: #FF3838;
+       height: 45px; 
+       width: 100px;
+       font-weight: 400;
+    &:hover {
+            background:#ff5555;
+        }
+    }
+
+    .cancelButton {
+          font-weight: 400;
+      color: #1A1A1A;
+background: white;
+       border: 1px solid #7E7E7E;
+     height: 45px; 
+       width: 100px;
+        &:hover {
+            background: #dddd !important;
+
+        }
+    }
+}
+
+.danger{
+    width: 60px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+h3{
+text-align: center;
+}
+
+p{
+text-align: center;
+}

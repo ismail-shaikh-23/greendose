@@ -1,0 +1,64 @@
+/* font imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #4caf50;
+}
+
+/* element selectors */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* class selectors */
+.validation-error-text {
+  color: orangered !important;
+  font-size: 10px;
+ text-align: left;
+  margin: 0 10px;
+}
+
+.required-mark {
+  color: orangered;
+}
+
+.status-button {
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.link-text {
+  color: #4a13c0;
+  font-weight: 600 !important;
+  cursor: pointer;
+}

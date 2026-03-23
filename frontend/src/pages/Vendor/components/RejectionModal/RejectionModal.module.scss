@@ -1,0 +1,33 @@
+.modal {
+  max-width: 40rem;
+}
+
+.form {
+  .reasonTextarea {
+    height: 150px;
+
+    textarea {
+      width: 300px;
+      height: 100px;
+      resize: none;
+    }
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    border-top: solid 1px #f2f2f2;
+    padding: 1rem;
+    padding-bottom: 0;
+
+    button {
+      height: 2rem;
+    }
+
+    .submitButton {
+      width: 8.2rem;
+    }
+  }
+}

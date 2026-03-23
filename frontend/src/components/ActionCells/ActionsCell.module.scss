@@ -1,0 +1,43 @@
+@use "@/styles/variables" as v;
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+  }
+
+  .editIcon {
+    color: v.$primary-color;
+  }
+
+  .deleteIcon {
+    color: v.$danger-color;
+  }
+
+  .viewText {
+    all: unset;
+    cursor: pointer;
+  }
+  .imageIcon {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 8px;
+    border: 0.5px solid #cccccc;
+  }
+
+  .approveIcon {
+    color: v.$success-color;
+  }
+
+  .rejectIcon {
+    color: v.$danger-color;
+  }
+}

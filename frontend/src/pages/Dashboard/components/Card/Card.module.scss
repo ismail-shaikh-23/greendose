@@ -1,0 +1,85 @@
+.dashboardCard {
+  border: 1px solid #e8f2da;
+  border-radius: 10px;
+  padding: 14px;
+  background-color: white;
+
+  width: 100%;
+  min-width: 140px;
+  max-width: 180px;
+  flex: 1 1 160px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    .cardData {
+      // display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // gap: 0.25rem;
+      
+
+      p {
+        margin: 0;
+      }
+
+      .cardTitle {
+        margin-bottom: 4px;
+        color: #68696b;
+        font-size: 12px;
+      }
+
+      .cardCount {
+        font-weight: 700;
+        font-size: 24px;
+        width: 20px;
+         white-space: nowrap;
+  display: inline-block;
+  // font-size: 1rem;
+
+      }
+    }
+
+    .cardIcon {
+    
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  .cardBody {
+    display: flex;
+    align-items: center;
+    gap:5px;
+    margin-top: 10px;
+    .percentageIcon {
+      width: 15px !important;
+      height: 14px !important;
+    }
+
+    .cardPercentage {
+      font-size: 12px;
+    }
+
+    .positive {
+      color: #00b69b;
+    }
+
+    .negative {
+      color: #f93c65;
+    }
+
+    .cardText {
+ 
+      font-weight: 500;
+      font-size: 10px;
+      color: #68696b;
+    }
+  }
+}

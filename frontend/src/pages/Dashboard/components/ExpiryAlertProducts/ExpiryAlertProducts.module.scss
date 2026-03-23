@@ -1,0 +1,24 @@
+.dashboardTableHead {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.main {
+  background-color: white;
+}
+
+.imageIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  border: 0.5px solid #cccccc;
+}
+.expiryDateCell {
+  color: #f93c65;
+}

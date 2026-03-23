@@ -1,0 +1,32 @@
+@use "@/styles/adminPage";
+
+.main {
+  .vendors_head{
+    display: flex;
+    gap: 10px ;
+    width: 100%;
+   .vendors_customHeader{
+    display: flex;
+    width: 100%;
+    }
+  .tabsContainer {
+    // padding: 1rem;
+justify-content: center;
+align-items: center;
+height: 50px;
+    background: linear-gradient(90.3deg, #F5F2ED 0.11%, #F4F5F0 52.04%, #EDF5F3 99.82%, #EDF5F3 99.82%);
+
+    border-radius: 0.375rem 0.375rem 0 0;
+  }
+  }
+   
+
+  :global {
+    
+    .rdt_TableBody {
+      max-height: calc(100vh - 22.4rem);
+    }
+  }
+}
+
+

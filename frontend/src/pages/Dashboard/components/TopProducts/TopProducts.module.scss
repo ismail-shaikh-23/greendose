@@ -1,0 +1,16 @@
+.parentContainer{
+    display: flex;
+    flex-direction: column;
+    .header{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .listContainer{
+        border: 1px solid #f2f2f2;
+        background-color: #ffffff;
+        overflow-y: auto;
+        height: 20.625rem;
+        // background-color: red;
+    }
+}

@@ -1,0 +1,33 @@
+@use "@/styles/adminPage";
+@use "@/styles/variables" as v;
+
+.main {
+  .topBar {
+    display: flex;
+    justify-content: flex-end;
+
+    .exportButton {
+      height: 2.8rem;
+    }
+  }
+  .select {
+    &:hover, &:focus {
+      background: rgba(v.$primary-color, 0.04);
+    }
+  }
+
+  :global {
+    .rdt_TableHeadRow {
+      .rdt_TableCol:last-child {
+        position: static;
+        box-shadow: unset;
+      }
+    }
+    .rdt_TableRow {
+      .rdt_TableCell:last-child {
+        position: static;
+        box-shadow: unset;
+      }
+    }
+  }
+}

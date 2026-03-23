@@ -1,0 +1,33 @@
+.inputField {
+  background: transparent;
+border: none;
+  color: #000;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 2px 0;
+  box-sizing: border-box;
+  // padding: 0 10px;
+  font-size: 12px;
+
+
+  :global {
+    .react-select__placeholder {
+      color: #797979;
+      font-weight: 400;
+    }
+  }
+
+  &::placeholder {
+    color: #797979;
+    font-weight: 400;
+  }
+
+  &:hover {
+    border-color: #9a9a9abb;
+  }
+
+  &:focus {
+    border-color: #506df555;
+    outline: 2px solid #506df555;
+  }
+}

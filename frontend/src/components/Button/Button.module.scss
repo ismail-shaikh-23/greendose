@@ -1,0 +1,98 @@
+@use "@/styles/variables" as v;
+
+.button {
+  // font-size: 14px !important;
+  color: white;
+  border-radius: 5px;
+  // padding: 7px 15px;
+  cursor: pointer;
+  border: none;
+  background: v.$primary-color;
+  // background: radial-gradient(62.17% 100% at 50% 0%, #93CC4A 0%, #157540 100%);
+
+  user-select: none;
+  // display: flex;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.outlineButton {
+  border: 1px solid v.$primary-color;
+  color: v.$primary-color;
+  background: #fff;
+
+  &:hover {
+    background: rgba(v.$primary-color, 0.05);
+  }
+
+  &:active {
+    background: #bfbfbf;
+    opacity: 1;
+  }
+}
+
+.primaryButton {
+ background: radial-gradient(62.17% 100% at 50% 0%, #93CC4A 0%, #157540 100%);
+
+  position: relative;
+  overflow: hidden;
+color: #FFFFFF;
+width: 124px;
+height: 20px;
+border-radius: 8px;
+
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+  // &:hover {
+  //   background: v.$button-color;
+  //   opacity: 0.9;
+  // }
+  &:active {
+    background: v.$button-color;
+    opacity: 1;
+  }
+
+  &:active::after {
+    animation: shimmer 0.1s ease forwards;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%
+    );
+    // pointer-events: none;
+  }
+
+  // &:hover::after {
+
+  // }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

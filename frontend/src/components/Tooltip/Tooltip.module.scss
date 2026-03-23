@@ -1,0 +1,19 @@
+.tooltip {
+  display: flex;
+
+  p {
+    overflow: hidden;
+    white-space: wrap;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+}
+
+.tooltipDiv {
+  font-size: 12px;
+}
+
+.anchorTag {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,36 @@
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 1.5rem;
+
+  .cardParent {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .dashboardProduct {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; 
+    }
+  }
+}

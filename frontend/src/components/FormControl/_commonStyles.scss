@@ -1,0 +1,34 @@
+.inputField {
+  height: 30px;
+  // background: #fcfcfc;
+  // border: 0.868px solid #9a9a9a77;
+  border: none;
+  color: #000;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: px 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 12px;
+  background: transparent;
+
+  &::placeholder {
+    color: #797979;
+    font-weight: 400;
+  }
+
+  &:hover:not(:disabled):not(:focus) {
+    border-color: #9a9a9abb;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: #506df5;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}

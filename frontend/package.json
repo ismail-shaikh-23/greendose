@@ -1,0 +1,53 @@
+{
+  "name": "greendose-wellness",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@uiw/react-md-editor": "^4.0.7",
+    "axios": "^1.9.0",
+    "env-cmd": "^10.1.0",
+    "js-cookie": "^3.0.5",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-data-table-component": "^7.7.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.56.4",
+    "react-hot-toast": "^2.5.2",
+    "react-loading-skeleton": "^3.5.0",
+    "react-paginate": "^8.3.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.0",
+    "react-select": "^5.10.1",
+    "react-slick": "^0.30.3",
+    "react-switch": "^7.1.0",
+    "react-tooltip": "^5.28.1",
+    "sass": "^1.89.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "vite": "^6.3.5"
+  }
+}

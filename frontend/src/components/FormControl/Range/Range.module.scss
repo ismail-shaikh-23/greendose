@@ -1,0 +1,81 @@
+@use "../commonStyles";
+@use "@/styles/variables" as v;
+
+.rangeInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  .inputField {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    accent-color: v.$primary-color; // modern browser support
+    height: 6px; // optional, just in case
+  
+    // WebKit (Chrome, Safari, Edge)
+    &::-webkit-slider-runnable-track {
+      background-color: rgba(v.$primary-color, 0.1);
+      height: 6px;
+      border-radius: 3px;
+    }
+  
+    &::-webkit-slider-thumb {
+      background-color: v.$primary-color;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      margin-top: -5px; // centers thumb on the track
+      cursor: pointer;
+      appearance: none;
+    }
+  
+    // Firefox
+    &::-moz-range-track {
+      background-color: rgba(v.$primary-color, 0.1);
+      height: 4px;
+      border-radius: 2px;
+    }
+  
+    &::-moz-range-thumb {
+      background-color: v.$primary-color;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  
+    // IE/Edge (legacy)
+    &::-ms-track {
+      background: transparent; // required to see custom styles
+      border-color: transparent;
+      color: transparent;
+      height: 4px;
+    }
+  
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+      background-color: rgba(v.$primary-color, 0.1);
+      border-radius: 2px;
+    }
+  
+    &::-ms-thumb {
+      background-color: v.$primary-color;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .rangeLabel {
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+
+    span {
+      cursor: pointer;
+    }
+  }
+}

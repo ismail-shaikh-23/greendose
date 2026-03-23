@@ -1,0 +1,47 @@
+@use "../commonStyles";
+@use "@/styles/variables" as v;
+
+.fieldArrayWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+
+
+  .addBtn {
+    margin-top: 10px;
+    height: 2rem;
+    width: 6rem;
+  }
+  .slabRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(v.$primary-color, 0.1);
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+        font-size: 12px;
+      }
+
+      svg {
+        cursor: pointer;
+        color: red;
+      }
+    }
+
+    .fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.5rem;
+      align-items: center;
+    }
+  }
+}

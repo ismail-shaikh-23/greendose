@@ -1,0 +1,49 @@
+@use "@/styles/loginPage";
+.mainDiv {
+  max-height: 60vh;
+  overflow-y: scroll;
+ 
+  &::-webkit-scrollbar {
+    width: 3px; 
+  }
+ 
+  
+  .login_logo {
+    padding-top: 0;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      & > div {
+        width: 12rem;
+      }
+
+      button {
+        grid-column: 1/ 3;
+        font-size: 14px !important;
+        font-weight: 600;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 40px;
+        border-radius: 8px;
+        background: #cccccc;
+        transition: background 0.3s ease;
+      }
+      .activeButton {
+        background: radial-gradient(
+          62.17% 100% at 50% 0%,
+          #93cc4a 0%,
+          #157540 100%
+        );
+        color: white;
+      }
+    }
+  }
+}

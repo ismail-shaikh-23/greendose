@@ -1,0 +1,63 @@
+.mainSalesDetails {
+  width: calc(100vw - 370px);
+  min-width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 6px 6px 54px 0px #0000000D;
+
+  .innerSales {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h3 {
+      margin-left: 20px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #202224;
+    }
+
+    .selectWrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .selectYear {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      height: 1.75rem;
+      width: 5.5rem;
+      background: #FCFDFD;
+      border: 0.6px solid #D5D5D5;
+      border-radius: 4px;
+      padding: 0 20px 0 10px;
+      color: #202224;
+
+      option {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 10px;
+      }
+    }
+
+    .customArrow {
+      position: absolute;
+      right: 15px;
+      top: 15%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      pointer-events: none;
+      rotate: 90deg;
+      color: #2B303466;
+    }
+  }
+
+  canvas {
+    height: 300px;
+  }
+}

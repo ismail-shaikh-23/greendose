@@ -1,0 +1,60 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile 
+    restart: always    
+    container_name: greendose-wellness-backend-${DEPLOY_ENV}
+    image: greendose-wellness-${DEPLOY_ENV}
+    environment:
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_HOST=${REDIS_HOST}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - FRONT_END_BASE_URL=${FRONT_END_BASE_URL}
+      - BACK_END_BASE_URL=${BACK_END_BASE_URL}
+    networks:
+      - greendose-networks-${DEPLOY_ENV}  
+    volumes:
+     - greendose-wellness-dev-uploads:/usr/share/app/public
+    
+
+  db:
+    restart: always
+    build: ./postgres
+    container_name: greendose-wellness-postgres-${DEPLOY_ENV}
+    image: greendose-wellness:db-${DEPLOY_ENV}
+    environment:
+      LC_ALL: C.UTF-8
+    networks:
+      - greendose-networks-${DEPLOY_ENV}  
+    volumes:
+      - greendose-wellness-pg-data:/var/lib/postgresql/data
+
+  redis:
+    restart: always
+    container_name: greendose-wellness-redis-${DEPLOY_ENV}
+    image: redis:latest
+    networks:
+      - greendose-networks-${DEPLOY_ENV} 
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    container_name: greendose-wellness-frontend-${DEPLOY_ENV}
+    image: greendose-wellness-frontend-${DEPLOY_ENV}
+    networks:
+      - greendose-networks-${DEPLOY_ENV} 
+
+volumes:
+  greendose-wellness-pg-data:
+  greendose-wellness-data-dev:
+  greendose-wellness-dev-uploads:
+
+networks:
+   greendose-networks-dev:

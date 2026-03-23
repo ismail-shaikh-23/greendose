@@ -1,0 +1,93 @@
+@use "@/styles/variables.scss" as v;
+
+.smallModal {
+  min-width: 20rem !important;
+  max-width: 500px;
+  width: 100%;
+  max-height: 70vh;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.image_width {
+  width: 25rem;
+}
+
+.viewOffersModal {
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.offerList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.offerCard {
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid v.$primary-active;
+  background-color: rgb(239, 255, 214);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  max-height: 80px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.offerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+}
+
+.badge {
+  background-color: v.$primary-active;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.offerDetails {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 0.8;
+
+  .originalPrice {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+  }
+
+  .finalPrice {
+    color: #388e3c;
+    font-weight: bold;
+    font-size: 1.05rem;
+  }
+}
+
+.noOffers {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #999;
+}

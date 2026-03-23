@@ -1,0 +1,116 @@
+@use "../commonStyles";
+
+.fileWrapper {
+  display: flex;
+  // flex-direction: column;
+  gap: 4px;
+  width: 100%;
+
+}
+
+.fileButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeffdb;
+  
+  color: #000;
+  font-weight: 600;
+  border: 1px solid #daf0b277;
+  border-radius: 5px;
+  padding: 6px 20px;
+  cursor: pointer;
+  width: 60px;
+  font-size: 10px;
+
+  &:hover {
+    background-color: #eaeaea;
+    border-color: #9a9a9abb;
+  }
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.chipInput {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-height: 30px;
+  background: transparent;
+  // border: 0.868px solid #9a9a9a77;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 10px;
+  gap: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  flex: 1;
+  max-width: 400px;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar:horizontal {
+    height: 1px;
+  }
+}
+
+.fileChip {
+  // background: #e0e0e0;
+  border: 1px solid rgb(224, 224, 224);
+  box-shadow: 0px 2px 4px 0px #1575404D;
+
+
+  border-radius: 6px;
+  padding: 1px;
+  display: inline-flex;
+  align-items: center;
+  // gap: 4px;
+  font-weight: 500;
+  position: relative;
+  .previewImage {
+    
+  width: 30px;
+  height: 20px;
+object-fit:contain ;
+  border-radius: 4px;
+
+}
+
+
+  p {
+    cursor: default;
+    margin: 0;
+    width: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+}
+
+.removeChip {
+  background: transparent;
+  border: none;
+  color: #6e6e6e;
+  font-size: 16px;
+  cursor: pointer;
+ 
+  position:absolute;
+  right: -6px;
+  top:-4px;
+
+
+  &:hover {
+    color: red;
+  }
+}
+
+.placeholder {
+  color: #797979;
+  font-weight: 400;
+  font-size: 12px;
+}

@@ -1,0 +1,87 @@
+.inputControl {
+  display: flex;
+  flex-direction: column;
+  // height: 60px;
+  gap: 1px;
+  position: relative;
+  width: 24rem;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+  background: #FFFFFF;         // ✅ Same background for label and input
+  border-radius: 8px;
+  padding: 2px 8px;           // ✅ Padding inside the wrapper
+  border: 1px solid #D6F4AFB2;
+  &.checkboxControl {
+    height: max-content;
+  }
+
+  &.textareaControl {
+    height: max-content;
+  }
+  .checkboxContainer {
+    display: flex;
+    gap: 0.5rem;
+    // margin-top: 10px;
+
+    .label {
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 10px;
+    color: #1A1A1A;
+padding-top: 10px;
+// line-height: 100%;
+letter-spacing: 0px;
+font-weight: 600;
+
+
+
+    .requiredMark {
+      color: orangered;
+    }
+  }
+
+  .inputField {
+    height: 30px;
+
+    border: 0.868px solid #9a9a9a77;
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-size: 10px;
+background: transparent;
+    &::placeholder {
+      color: #CBCBCB;
+      
+      
+font-weight: 400;
+font-size: 14px;
+// line-height: 100%;
+letter-spacing: 0px;
+
+    }
+
+    &:hover {
+      border-color: #9a9a9abb;
+    }
+
+    &:focus {
+      border-color: #506df555;
+      outline: 2px solid #506df555;
+    }
+  }
+}
+
+.error{
+  font-size: 1px;
+}

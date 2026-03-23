@@ -1,0 +1,109 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+  height: 3.75rem;
+  background-color: transparent;
+
+  .upper_title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17.29px;
+    letter-spacing: -2%;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: -20px;
+    background: radial-gradient(
+      62.17% 100% at 50% 0%,
+      #93cc4a 0%,
+      #157540 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    line-height: 30.25px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+}
+
+.rightSection {
+  position: relative;
+  padding: 0.35rem;
+  margin-right: 30px;
+  border-radius: 15px;
+  z-index: 1;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+
+  // Simulated border
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px; // thickness of border
+    border-radius: 15px;
+    background: radial-gradient(
+      62.17% 100% at 50% 0%,
+      #93cc4a 0%,
+      #157540 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+
+  // .rightSection {
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 0rem;
+  //   border: 1px solid #333;
+  //   margin-right: 30px;
+  //   padding: 0.35rem;
+  //   border-radius: 15px;
+
+  //   border-width: 1px;
+  //   border-style: solid;
+  //   border-image: radial-gradient(62.17% 100% at 50% 0%, #93CC4A 0%, #157540 100%);
+  //   border-image-slice: 1;
+  .searchIcon {
+    margin-left: 10px;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #333; // needed if you're using stroke="currentColor"
+  }
+
+  .searchInput {
+    padding: 0.5rem 0.75rem;
+    // border: 0.5px solid;
+
+    // border-image-source: radial-gradient(62.17% 100% at 50% 0%, #93CC4A 0%, #157540 100%);
+    background: transparent;
+    border: none;
+    // border-radius: 0.375rem;
+    font-size: 0.875rem;
+    outline: none;
+
+    &:focus {
+      border-color: #572fca;
+    }
+  }
+
+  .bellIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: #333;
+  }
+}
