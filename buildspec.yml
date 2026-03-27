@@ -27,14 +27,14 @@ phases:
       - docker compose -f docker-compose.yml -f docker/dev.yml build
 
       - echo "Tagging images"
-      - docker tag greendose-wellness-frontend-${DEPLOY_ENV} $DOCKER_USERNAME/greendose/frontend:latest
-      - docker tag greendose-wellness-${DEPLOY_ENV} $DOCKER_USERNAME/greendose/backend:latest
+      - docker tag greendose-wellness-frontend-${DEPLOY_ENV} $DOCKER_USERNAME/greendose-frontend:latest
+      - docker tag greendose-wellness-${DEPLOY_ENV} $DOCKER_USERNAME/greendose-backend:latest
 
   post_build:
     commands:
       - echo "Pushing images to Docker Hub"
-      - docker push $DOCKER_USERNAME/greendose/frontend:latest
-      - docker push $DOCKER_USERNAME/greendose/backend:latest
+      - docker push $DOCKER_USERNAME/greendose-frontend:latest
+      - docker push $DOCKER_USERNAME/greendose-backend:latest
       - echo "Build completed successfully"
 
 artifacts:
