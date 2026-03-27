@@ -24,11 +24,15 @@ services:
     container_name: greendose-db
     image: postgres:12
     environment:
+      POSTGRES_DB: appdb
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: strongpassword
       LC_ALL: C.UTF-8
     volumes:
       - greendose-wellness-pg-data:/var/lib/postgresql/data
     ports:
-      - "7860:5432"  
+      - "7860:5432" 
+
 
   redis:
     restart: always
