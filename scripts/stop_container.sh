@@ -3,4 +3,4 @@
 cd /home/ubuntu/app
 
 echo "Stopping running containers..."
-docker compose f docker-compose-cicd.yml down || true
+docker compose -f docker-compose-cicd.yml down || true

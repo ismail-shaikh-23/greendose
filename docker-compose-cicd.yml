@@ -27,7 +27,6 @@ services:
       POSTGRES_DB: appdb
       POSTGRES_USER: appuser
       POSTGRES_PASSWORD: strongpassword
-      LC_ALL: C.UTF-8
     volumes:
       - greendose-wellness-pg-data:/var/lib/postgresql/data
     ports:
