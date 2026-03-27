@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json /app/
 RUN npm install 
 
-ARG VITE_API_BASE_URL=http://backend:3000
+ARG VITE_API_BASE_URL=http://3.83.13.230:7862
 
 ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 
